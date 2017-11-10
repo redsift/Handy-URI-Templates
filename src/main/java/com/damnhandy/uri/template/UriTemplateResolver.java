@@ -85,7 +85,7 @@ public class UriTemplateResolver
       for(UriTemplate template : templates)
       {
          Pattern p = template.getReverseMatchPattern();
-         System.out.println(p.pattern());
+         //System.out.println(p.pattern());
          Matcher m = p.matcher(uri);
          if (m.matches())
          {
@@ -94,7 +94,7 @@ public class UriTemplateResolver
             {
                params.put(param, m.group(param));
             }
-            System.out.println(params);
+            //System.out.println(params);
             return params;
          }
       }
